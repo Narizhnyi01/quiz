@@ -122,12 +122,12 @@ class Auth extends Component{
     return(
       <div className={classes.Auth}>
         <div>
-          <h1>Авторирация</h1>
+          <h1>Авторизация</h1>
           <form action="" onSubmit={this.submitHandler} className={classes.AuthForm}>
 
             { this.renderInputs() }
 
-            <Button type="success" onClick={this.loginHandler} disabled={!this.state.isFormValid} >Войти</Button>
+            <Button type="secondary" onClick={this.loginHandler} disabled={!this.state.isFormValid} >Войти</Button>
             <Button type="primary" onClick={this.registerHandler} disabled={!this.state.isFormValid} >Зарегистрироваться</Button>
           </form>
         </div>

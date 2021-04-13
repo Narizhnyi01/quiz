@@ -1,21 +1,25 @@
+import React from 'react'
 import classes from './Button.module.css'
+import Button from '@material-ui/core/Button'
 
-const Button = props => {
+
+const ButtonCustom = props => {
   const cls = [
     classes.Button,
     classes[props.type]
   ]
 
   return(
-    <button
+    <Button
       onClick={props.onClick}
       className={cls.join(' ')}
       disabled={props.disabled}
-
+      color={props.type}
+      variant="contained"
     >
       {props.children}
-    </button>
+    </Button>
   )
 }
 
-export default Button
+export default ButtonCustom

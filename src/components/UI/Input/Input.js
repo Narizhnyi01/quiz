@@ -1,5 +1,6 @@
 import React from 'react'
 import classes from './Input.module.css'
+import TextField from "@material-ui/core/TextField";
 
 function isInvalid({valid, touched, shouldValidate}) {
   return !valid && shouldValidate && touched
@@ -16,10 +17,19 @@ const Input = props => {
 
   return(
     <div className={cls.join(' ')}>
-      <label htmlFor={htmlFor}>{props.label}</label>
-      <input
+      {/*<label htmlFor={htmlFor}>{props.label}</label>*/}
+      {/*<input*/}
+      {/*  type={inputType}*/}
+      {/*  id={htmlFor}*/}
+      {/*  value={props.value}*/}
+      {/*  onChange={props.onChange}*/}
+      {/*/>*/}
+      <TextField
+        label={props.label}
+        className="text"
+        variant="outlined"
+        fullWidth
         type={inputType}
-        id={htmlFor}
         value={props.value}
         onChange={props.onChange}
       />

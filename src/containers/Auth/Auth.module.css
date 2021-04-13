@@ -4,7 +4,11 @@
     padding-top: 100px;
     flex-grow: 1;
     width: 100%;
-    background: linear-gradient(270deg, #cef2fa 0%, #59bfef 100%);
+    /*background: linear-gradient(270deg, #cef2fa 0%, #59bfef 100%);*/
+    /*background-color: #121212;*/
+    background: linear-gradient(
+            201.52deg
+            ,#ff69a6 0,#c8245a 100%);
 }
 .Auth > div{
     width: 100%;
@@ -17,8 +21,11 @@
     text-align: center;
 }
 .AuthForm{
-    background: #eee;
+    background: #fff;
     box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.5);
-    padding: 15px;
+    padding: 20px;
     border-radius: 5px;
+}
+.AuthForm Button{
+    margin-right: 20px;
 }

@@ -109,7 +109,7 @@ class QuizCreator extends Component {
             errorMessage={control.errorMessage}
             onChange={event => this.onChangeHandler(event.target.value, controlName)}
           />
-          {index === 0 ? <hr key={controlName}/> : null}
+          {/*{index === 0 ? <hr key={controlName}/> : null}*/}
         </Auxiliary>
 
       )
@@ -143,20 +143,24 @@ class QuizCreator extends Component {
             {this.renderControls()}
 
             {select}
-            <Button
-              type="primary"
-              onClick={this.addQuestionHandler}
-              disabled={!this.state.isFormValid}
-            >
-              Добавить вопрос
-            </Button>
-            <Button
-              type="success"
-              onClick={this.createQuizHandler}
-              disabled={this.props.quiz.length === 0}
-            >
-              Создать тест
-            </Button>
+            <div className={classes.row_btn}>
+              <Button
+                type="primary"
+                onClick={this.addQuestionHandler}
+                disabled={!this.state.isFormValid}
+                className={classes.Btn}
+              >
+                Добавить вопрос
+              </Button>
+              <Button
+                type="secondary"
+                onClick={this.createQuizHandler}
+                disabled={this.props.quiz.length === 0}
+              >
+                Создать тест
+              </Button>
+            </div>
+
           </form>
         </div>
       </div>

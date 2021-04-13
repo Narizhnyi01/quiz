@@ -6,10 +6,10 @@ export function auth(email, password, isLogin) {
       email, password,
       returnSecureToken: true
     }
-    let url = 'https://identitytoolkit.googleapis.com/v1/accounts:signInWithPassword?key=AIzaSyCAUPKyqSdgnojxXmeugAtSJCX8l6LO10s'
+    let url = 'https://identitytoolkit.googleapis.com/v1/accounts:signUp?key=AIzaSyCAUPKyqSdgnojxXmeugAtSJCX8l6LO10s'
 
     if (isLogin) {
-      let url = 'https://identitytoolkit.googleapis.com/v1/accounts:signUp?key=AIzaSyCAUPKyqSdgnojxXmeugAtSJCX8l6LO10s'
+      url = 'https://identitytoolkit.googleapis.com/v1/accounts:signInWithPassword?key=AIzaSyCAUPKyqSdgnojxXmeugAtSJCX8l6LO10s'
     }
     const response = await axios.post(url, authData)
     const data = response.data
